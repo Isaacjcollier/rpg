@@ -1,0 +1,36 @@
+<h1><%=pluralize(@parties.size, "Party") %></h1>
+
+<% @parties.each do |party| %>
+  <article>
+    <header>
+      <h2><%= link_to(party.name, party) %></h2>
+    </header>
+    <p>
+      <%= party.style %>
+    </p>
+    <table>
+      <tr>
+        <th>Requirement</th>
+        <td> Minimum Level Needed To Join <%= party.level %></td>
+      </tr>
+    </table>
+  </article>
+<% end %>
+
+    Total Champions: <%= @character %>
+
+    <p>
+
+<%= link_to "new_Party",  new_party_path %>
+
+<p>
+
+  <%= link_to "All Characters", characters_path %>
+
+  <p>
+
+<%= link_to "New_Character", new_character_path %>
+
+<p>
+
+  <%= link_to "Form a Party", new_character_party_path %>

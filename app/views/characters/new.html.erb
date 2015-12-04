@@ -1,0 +1,12 @@
+<h1> Creating New Character <h1>
+
+<%= form_for Character.new do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :level %>
+  <%= f.text_field :level %>
+
+   <%= f.submit %>
+   <% end %>

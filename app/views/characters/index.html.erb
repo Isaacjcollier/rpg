@@ -1,0 +1,7 @@
+<% @characters.each do |c| %>
+
+<p>
+  <%= link_to c.name, character_path(c) %>
+</p>
+
+<%end%>

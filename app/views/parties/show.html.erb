@@ -1,0 +1,29 @@
+<h1><%= @party.name %> </h1>
+
+  <article>
+    <p>
+      <%= @party.style %>
+    </p>
+    <table>
+      <tr>
+        <th>Requirement</th>
+        <td> Minimum Level Needed To Join <%= @party.level %></td>
+      </tr>
+    </table>
+  </article>
+
+  <article>
+    <p>
+      Total Champions: <%= @party.characters.count %>
+
+    </p>
+
+    <% @party.characters.each do |c|%>
+      <p><%= c.name %>
+        <%end%>
+
+      </p>
+
+</article>
+
+<%= link_to "All Parties", parties_path %>

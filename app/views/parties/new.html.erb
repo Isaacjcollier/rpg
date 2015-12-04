@@ -1,0 +1,12 @@
+<h1> Creating New Party <h1>
+
+<%= form_for Party.new do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :level %>
+  <%= f.text_field :level %>
+
+   <%= f.submit %>
+   <% end %>
